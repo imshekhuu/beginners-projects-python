@@ -1,44 +1,34 @@
 import random
-
 emojis = {
     "r" : "🪨",
-    "s" : "✂️",
-    "p" : "📃"
+    "p" : "📃",
+    "s" : "✂️"
 }
-choices = ("r", "p", "s")
+choice = ( "s", "p", "r")
 while True:
-    computer_choice = random.choice(choices)
-    player_choice = input("what is your choice? (r/s/p): ").lower()
-    if player_choice not in choices:
-        print("try again!")
-        continue
-    print(f"you choose {emojis[player_choice]}")
-    print(f"computer chose {emojis[computer_choice]}")
-    if player_choice == computer_choice:
-        print("match draw!")
-    elif(
-         computer_choice == "r" and player_choice == "p" or
-         computer_choice == "p" and player_choice == "s" or
-         computer_choice == "s" and player_choice == "r"
-    ):
-     print("you win!")
+    play = input("sure you want to challage the python languge (y/n): ").lower()
+    if play == "y":
+        computer = random.choice(choice)
+        player_choice = input("enter your choice(r/p/s): ").lower()
+        if player_choice not in choice:
+            print("something went wrong!!")
+            continue
+        print(f"your choice is {emojis[player_choice]}")
+        print(f"computer choice is {emojis[computer]}")
+        if player_choice == computer:
+            print("😒match draw!!")
+        elif (
+            player_choice == "r" and computer == "s" or
+            player_choice == "s" and computer == "p" or
+            player_choice == "p" and computer == "r"
+        ):
+            print("😊you won!!")
+            break
+        else:
+            print("😢you loss")
+            break
     else:
-            print("you lose!")
-    user_more = input("want to play again?(y/n) ").lower()
-    if user_more == "y":
+        print("you are losser!! dont challange python again")
         break
 
 
-
-
-# elif(
-#     computer_choice == "s" and computer_choice == "r" or
-#     computer_choice == "p" and computer_choice == "s" or
-#     computer_choice == "r" and computer_choice == "p"
-# ):
-#     print("you win!")
-# else:
-#     print("you lose!")
-# user_more = input("want to play again?(y/n) ").lower()
-#     if user_more == "y":
-#         break
