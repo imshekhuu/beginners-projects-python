@@ -153,7 +153,7 @@ Example structure:
 ```json
 {
   "1001": {
-    "name": "Divya",
+    "name": "Divya Singh Shekhawat",
     "balance": 1000,
     "pin": {
       "salt": "...",
@@ -243,6 +243,7 @@ This keeps the project **simple, explainable, and strong**.
 
 ---
 
-**Author:** Divya
+**Author:** Divya Singh Shekhawat
 **Language:** Python
 **Type:** Educational / Practice Project
+
